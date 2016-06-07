@@ -42,8 +42,8 @@ $Id: style.css 28793 2013-05-24 03:55:18Z jieyin $
 body{
 	color:#333;/*全局默认文本颜色*/
 	font:12px/1.5 Tahoma;/*全局字体大小和行高*/
-	background:#f4f4f4;/*全局背景颜色*/
-	padding-top:45px;/*为头部悬停导航支撑出高度*/
+	background:#f9f9f9;/*全局背景颜色*/
+	padding-top:62px;/*为头部悬停导航支撑出高度*/
 }
 /*全局预留包裹，可与body组合背景效果*/
 .wrap{
@@ -123,24 +123,28 @@ a:hover{
 ===================
 */
 .nav{
-	float:left;
+	float:right;
 }
 .nav ul{
-	height:45px;
+	height:62px;
 	float:left;
-	padding:0 3px 0;
+	padding:0 60px 0;
 }
 .nav li{
 	float:left;
+	background: url(../../images/fg.png) 0 center no-repeat;
+}
+.nav li:first-child{
+	background: none;
 }
 .nav li a{
 	color:#ffffff;
 	display:block;
 	float:left;
-	line-height:45px;
-	height:45px;
+	line-height:62px;
+	height:62px;
 	font-size:14px;
-	padding:0 12px;
+	padding:0 26px;
 }
 .nav li a:hover{
 	/*text-decoration:none;
@@ -149,7 +153,8 @@ a:hover{
 .nav li.current a,
 .nav li.current a:hover{
 	color:#fff;
-	background:#3b7fc4;
+	font-weight: 700;
+	//background:#3b7fc4;
 }
 
 /*
@@ -158,7 +163,7 @@ a:hover{
 ===================
 */
 .nav_weak{
-	width:960px;
+	width:1120px;
 	margin:0 auto;
 	background:#ffffff;
 	border:1px solid;
@@ -196,7 +201,7 @@ a:hover{
 */
 /*头部包裹*/
 .header_wrap{
-	background:#488fce;/*导航背景*/
+	background:#dd2727;/*导航背景*/
 	display:block;
 	position:fixed;
 	_position:absolute;
@@ -208,10 +213,10 @@ a:hover{
 }
 /*导航宽度*/
 .header{
-	width:960px;
+	width:1120px;
 	margin:auto;
-	min-height:45px;
-	_height:45px;
+	min-height:62px;
+	_height:62px;
 }
 /*顶部菜单效果*/
 .header_wrap .cure_menu{
@@ -219,14 +224,14 @@ a:hover{
 }
 /*主体内容结构*/
 .main_wrap{
-	width:960px;
+	width:1120px;
 	margin-left:auto;
 	margin-right:auto;
 	padding-top:10px;
 }
 /*主体结构样式*/
 .main{
-	background:#fff url(../../images/main_bg.png) right 0 repeat-y;
+	//background:#fff url(../../images/main_bg.png) right 0 repeat-y;
 	border:1px solid;
 	border-color:#fff #efefef #d3d3d3 #efefef;
 	box-shadow:0 1px 1px rgba(0,0,0,0.02);
@@ -257,15 +262,17 @@ a:hover{
 }
 /*页脚、底部*/
 .footer_wrap{
-	width:960px;
-	margin:0 auto;
-	border-top:1px solid #ccc;
-	border-top:1px solid rgba(0,0,0,0.15);
+	width:100%;
+	background: #ffffff;
+	//border-top:1px solid #ccc;
+	//border-top:1px solid rgba(0,0,0,0.15);
 }
 .footer{
+	width: 1120px;
 	padding:15px 0;
-	border-top:1px solid #fff;
-	border-top:1px solid rgba(255,255,255,0.7);
+	margin:0 auto;
+	//border-top:1px solid #fff;
+	//border-top:1px solid rgba(255,255,255,0.7);
 }
 .footer p{
 	text-align:center;
@@ -388,11 +395,17 @@ a:hover{
 */
 .header_login{
 	float:right;
-	padding:13px 0 0;
+	height:30px;
+	margin-top: 14px; 
+	padding: 0 14px;
+	border-radius:15px;
+	border:1px #ffffff solid;
+	color:#fff;
 }
 .header_login a{
 	color:#fff;
-	margin:0 0 0 10px;
+	line-height: 30px;
+	margin:0 5px;
 }
 
 /*
@@ -405,19 +418,35 @@ a:hover{
 */
 .header_login_later{
 	float:right;
-	padding-top:12px;
+	padding-top:10px;
 }
 .header_login_later a{
 	float:left;
 	color:#fff;
 	margin-left:10px;
-	line-height:22px;
-	height:22px;
+}
+.header_login_later .userimg{
+	display: block;
+	width: 42px;
+	height: 42px;
+	overflow: hidden;
+	border-radius:50%;
+}
+.header_login_later .userimg img{
+	width: 100%;
 }
 .header_login_later .username{
+	height: 42px;
 	font-weight:700;
+	line-height:42px;
 	padding-right:5px;
 	_margin-top:5px;
+}
+.header_login_later .username:focus{
+	outline:none;
+}
+.header_login_later .username:hidefocus{
+	outline:none;
 }
 /*登录后按钮--消息、发帖*/
 .header_login_btn{
@@ -603,7 +632,7 @@ a:hover{
 }
 .header_menu{
 	border:1px solid #c7c7c7;
-	box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+	/*box-shadow: 0 2px 3px rgba(0,0,0,0.3);*/
 	border-bottom-right-radius:3px;
 	border-bottom-left-radius:3px;
 	border-top-left-radius:3px;
@@ -613,25 +642,26 @@ a:hover{
 /*头部用户名特殊处理*/
 .header_menu .header_menu_hd{
 	position:absolute;
-	right:-1px;
-	top:-38px;
-	line-height:27px;
-	height:37px;
-	color:#333;
-	font-weight:700;
-	padding:0 10px;
-	background:#fff;
+	right:0;
+	top:-53px;
+	line-height:42px;
+	height:42px;
+	color:#ffffff;
+	/*font-weight:700;*/
+	padding-right:10px;
+	background: #dd2727;
+	/* background:#fff;
 	box-shadow: 0 -1px 1px rgba(0,0,0,0.3);
 	border-top-right-radius:3px;
 	border-top-left-radius:3px;
 	border:1px solid #c7c7c7;
-	border-bottom:0 none;
+	border-bottom:0 none; */
 }
 .header_menu .header_menu_hd .username{
-	color:#333;
+	color:#ffffff;
 	padding:0;
 	margin:0;
-	line-height:30px;
+	line-height:42px;
 }
 /*三角*/
 .header_menu .core_arrow_up{
@@ -656,7 +686,7 @@ a:hover{
 ===================
 */
 .my_menu_wrap{
-	top:44px;
+	top:62px;
 	margin-left:-126px;
 }
 .my_menu{
@@ -672,34 +702,36 @@ a:hover{
 	float:left;
 	width:100%;
 	height:32px;
+	margin-top: -1px;
 }
 .my_menu ul li a{
 	float:none;
 	padding:0;
-	margin:0;
+	margin:0 4px;
 	display:block;
+	text-align: center;
 	color:#666;
 	line-height:30px;
 	height:30px;
 	overflow:hidden;
-	border-top:1px solid #ffffff;
-	border-bottom:1px solid #ffffff;
+	border-top:1px solid #e8e8e8;
+	/*border-bottom:1px solid #ffffff;*/
 }
-.my_menu ul li a em{
+/*.my_menu ul li a em{
 	background:url(../../images/common/header_dorp.png) 999px 999px no-repeat;
 	width:16px;
 	height:16px;
 	overflow:hidden;
 	float:left;
 	margin:7px 7px 0 10px;
-}
-.my_menu ul li a:hover{
-	border-top:1px solid #e8e8e8;
-	border-bottom:1px solid #e8e8e8;
+}*/
+.my_menu ul li:hover{
+	/*border-top:1px solid #e8e8e8;
+	border-bottom:1px solid #e8e8e8;*/
 	color:#438bc9;
 	text-decoration:none;
 }
-.my_menu ul.ct li a:hover,
+.my_menu ul.ct li:hover,
 .my_menu ul.ft{
 	background:#f6f6f6;
 	background-repeat: no-repeat;
@@ -793,8 +825,9 @@ a:hover{
 
 /*底部特殊处理*/
 .my_menu ul.ct{
-	border-bottom:1px solid #e2e2e2;
-	padding:1px 0;
+	/*border-bottom:1px solid #e2e2e2;
+	padding:1px 0;*/
+	overflow: hidden;
 }
 .my_menu ul.ft{
 	border-top:1px solid #fff;

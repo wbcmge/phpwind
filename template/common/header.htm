@@ -13,6 +13,7 @@
 				<!--# } #-->
 			</a>
 		</div>
+        <template source="TPL:common.header_login" load="true" />
 		<nav class="nav_wrap">
 			<div class="nav">
 				<ul>
@@ -36,14 +37,6 @@
 				</ul>
 			</div>
 		</nav>
-		<hook name="header_nav"/>
-		<div class="header_search" role="search">
-			<form action="{@url:search/s/run}" method="post">
-				<input type="text" id="s" aria-label="搜索关键词" accesskey="s" placeholder="搜索其实很简单" x-webkit-speech speech name="keyword"/>
-				<button type="submit" aria-label="搜索"><span>搜索</span></button>
-			</form>
-		</div>
-		<template source="TPL:common.header_login" load="true" />
 	</div>
 </header>
 <!--#
