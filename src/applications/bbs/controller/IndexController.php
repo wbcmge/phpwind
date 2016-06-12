@@ -24,6 +24,9 @@ class IndexController extends PwBaseController {
 		
 		Wind::import('SRV:forum.srv.threadList.PwNewThread');
 		$forbidFids = Wekit::load('forum.srv.PwForumService')->getForbidVisitForum($this->loginUser, null, true);
+
+		//论坛模块数据
+		//var_dump( Wekit::load('forum.srv.PwForumService')->getCommonForumList());exit;
 		$dataSource = new PwNewThread($forbidFids);
 		if ($order == 'postdate') {
 			$dataSource->setOrderBy($order);

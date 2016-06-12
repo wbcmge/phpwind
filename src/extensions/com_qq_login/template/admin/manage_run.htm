@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html>
+<head>
+<template source='TPL:admin.common.head' />
+</head>
+<body>
+<div class="wrap">
+<form method="post">
+	<div class="h_a">设置您的腾讯开放平台 API key</div>
+	<div class="table_full">
+	<table width="100%">
+		<colgroup><col align="right" width="150">
+		<col>
+		</colgroup><tbody><tr>
+			<th>APP ID:</th>
+			<td><input type="text" name="appid" value="{$appid}" class="input length_4" /> 例如：100337231</td>
+		</tr>
+		<tr>
+			<th>KEY</th>
+			<td><input type="password" name="secret" class="input length_4" value="{$secret}" /> 例如：6ebc47bb38d638ca59995bc0c4d95a74
+		</td>
+		</tr>
+		
+
+		<tr>
+			<td colspan="2">
+			<!--# if ($msg) { #-->
+				{$msg}
+			<!--# } else { #-->
+			 	<ol>
+			 	<li>如果您的站点没有QQ API KEY，请前往<a href="http://connect.qq.com/intro/login/" target="_blank">腾讯开放平台</a>申请。错误填写将导致出错。</li>
+			 	<li>回调地址必须是 {$_SERVER['HTTP_HOST']} 或它的根域名。</li>
+			 	</ol>
+			<!--# } #-->
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+<div class="">
+			<button class="btn btn_submit" type="submit">提交</button>
+	</div>
+			</td>
+		</tr>
+		<tr>
+<p>点击下方QQ登陆可测试是否连接成功</p><br/>
+			<td colspan="2"><a href="{@G:url.base}/index.php?m=app&app=com_qq_login" target="_blank"><img src="{@G:url.extres}/com_qq_login/Connect_logo_3.png" valign="middle" /></a><br />
+<p>魅柒网 将持续推出各种第三方登陆接口，如有需要请点击<a href="http://www.medz.tk/" tsrget="blank">www.medz.tk</a>查看更多，以及其他资源下载
+
+<br />一下是模板自定义html的源码，你可以利用一下代码在你新建的页面上添加QQ登陆。<br><textarea style="width:400px" onclick="this.select()"><a href="{@G:url.base}/index.php?m=app&app=com_qq_login" target="_blank"><img src="{@G:url.extres}/com_qq_login/Connect_logo_3.png" valign="middle" /></a></textarea>
+			</td>
+		</tr>
+	</tbody></table>
+
+</div>
+</form>
+</div>
+</body>
+</html>
